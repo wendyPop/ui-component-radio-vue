@@ -1,0 +1,48 @@
+@charset "utf-8";
+#app {
+    text-align: center;
+    margin-top: 10%;
+}
+section {
+    margin: 0 auto;
+    display: inline-block;
+}
+pre {
+    background-color: darkgrey;
+    display: inline-block;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.radio_box {
+    line-height: 27px;
+}
+
+.radio_check {
+    position: absolute;
+    left: -9999px;
+}
+
+input[type="radio"].radio_check + label {
+    &:before{
+        content:'';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width:20px;
+        height:20px;
+         background:url("~@/assets/images/ico_radio.svg") no-repeat 0 0;
+    }
+}
+
+input[type="radio"].radio_check:checked + label:before {
+ background-image: url("~@/assets/images/ico_radio_on.svg");
+}
+
+.radio_type {
+    position: relative;
+    display: block;
+    padding-left: 25px;
+    color: #666;
+}
+  
